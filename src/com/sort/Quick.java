@@ -1,24 +1,6 @@
-package com.two;
+package com.sort;
 
-public class TwoTest {
-
-    private static int find(int[] arr, int target) {
-
-        int low = 0;
-        int high = arr.length - 1;
-
-        while (low < high) {
-            int middle = (high + low) / 2;
-            if(arr[middle] < target) {
-                low = middle;
-            } else if(arr[middle] > target) {
-                high = middle;
-            } else {
-                return middle;
-            }
-        }
-        return -1;
-    }
+public class Quick {
 
     private static void quickSort(int[] arr, int low, int high) {
         //1,找到递归算法的出口
@@ -62,9 +44,6 @@ public class TwoTest {
     }
 
     public static void main(String[] args) {
-        /*int[] arr = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21};
-        System.out.println(find(arr, 15));*/
-
         int[] arr = {12, 3, 10, 7, 8, 11, 6, 15, 4, 19, 2};
 
         /*int[] target = */quickSort(arr, 0, arr.length -  1);
@@ -73,7 +52,6 @@ public class TwoTest {
             System.out.println("i = " + arr[i]);
         }
         //System.out.println(find(arr, 15));
-
     }
 
 }

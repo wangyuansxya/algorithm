@@ -1,5 +1,8 @@
 package com.algorithm;
 
+/**
+ * 计算俩个列表中相同位置元素的和
+ */
 public class AddTwoNumbers {
 
     public static void main(String[] args) {
@@ -46,7 +49,7 @@ public class AddTwoNumbers {
     }
 
     public static class ListNode {
-        public int val;
+        public int val;//进位
         public ListNode next;
 
         public ListNode(int val) {

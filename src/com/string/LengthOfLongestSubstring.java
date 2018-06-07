@@ -1,8 +1,11 @@
-package com.algorithm;
+package com.string;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 找出字符串中，俩个相同字符出现的最远距离
+ */
 public class LengthOfLongestSubstring {
 
     public static void main(String[] args) {
