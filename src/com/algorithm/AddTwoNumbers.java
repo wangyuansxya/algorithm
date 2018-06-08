@@ -1,13 +1,26 @@
 package com.algorithm;
 
 /**
- * 计算俩个列表中相同位置元素的和
+ * 给定两个非空链表来表示两个非负整数。位数按照逆序方式存储，它们的每个节点只存储单个数字。将两数相加返回一个新的链表。
  */
 public class AddTwoNumbers {
 
     public static void main(String[] args) {
         // write your code here
+        ListNode l1 = new ListNode(9);
+        l1.next = new ListNode(4);
+        l1.next.next = new ListNode(5);
 
+        ListNode l2 = new ListNode(5);
+        l2.next = new ListNode(6);
+        l2.next.next = new ListNode(4);
+
+        ListNode res = addTwoNumbers(l1, l2);
+        System.out.println("args = [" + res.val + "]");
+        System.out.println("args = [" + res.next.val + "]");
+        System.out.println("args = [" + res.next.next.val + "]");
+        System.out.println("args = [" + res.next.next.next.val + "]");
+//        System.out.println("args = [" + res.next.next.next.val + "]");
     }
 
     /**
@@ -20,7 +33,7 @@ public class AddTwoNumbers {
      * @return
      */
 
-    public ListNode addTwoNumbers(ListNode p1, ListNode p2) {
+    public static ListNode addTwoNumbers(ListNode p1, ListNode p2) {
         if(p1 == null) {
             return p2;
         }
@@ -29,23 +42,29 @@ public class AddTwoNumbers {
         }
 
         //返回的结果node
-        ListNode result = p1;
+        ListNode result = new ListNode(0);
+        ListNode current = result;
+
         //进位
         int carry = 0;
-        while (p1 != null && p2 != null) {
-            int sum = p1.val + p2.val + carry;
-            result.val = sum % 10;// 本位的结果
+        while (p1 != null || p2 != null) {
+            int x = p1 == null ? 0 : p1.val;
+            int y = p1 == null ? 0 : p2.val;
+            int sum = x + y + carry;
+            //current.val = sum % 10;// 本位的结果
             carry = sum / 10;// 本次进位
+            current.next = new ListNode(sum % 10);
+            current = current.next;
 
-            p1 = p1.next;
-            p2 = p2.next;
-            result.next = p1;
+            if(p1 != null)p1 = p1.next;
+            if(p2 != null)p2 = p2.next;
+
         }
-
         if(carry > 0) {
-            result.next = new ListNode(carry);
+            current.next = new ListNode(carry);
         }
-        return result;
+        return result.next;
+
     }
 
     public static class ListNode {

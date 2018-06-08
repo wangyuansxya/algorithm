@@ -42,10 +42,27 @@ public class FindTarget {
 
 
 	}
-	
+
+	public static int[] twoSum(int[] nums, int target) {
+		final int len = nums == null ? 0 : nums.length;
+		Map<Integer, Integer> map = new HashMap<>();
+
+		int[] result = new int[2];
+		for(int i = 0; i < len; i++) {
+			int diff = target - nums[i];
+			if(map.containsKey(diff)) {
+				result[0] = map.get(diff);
+				result[1] = i;
+				break;
+			}
+			map.put(nums[i], i);
+		}
+		return result;
+	}
+
 	public static void main(String[] args) {
 		int[] arr = {16,7,11,2, 6, 3};
-		int[] a = findTarget(arr, 9);
+		int[] a = twoSum(arr, 9);
 		if(a == null || a.length <= 0) return;
 		for (int i : a) {
 			System.out.println(i);
