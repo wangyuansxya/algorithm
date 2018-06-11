@@ -1,4 +1,4 @@
-package com.tree;
+package com.array;
 
 /**
  * 输出数组中，每位数组的值，对应数组位置的数值，并输出，小于或者大于则不输出

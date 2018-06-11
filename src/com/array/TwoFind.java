@@ -1,6 +1,9 @@
-package com.find;
+package com.array;
 
-public class TwoFindTest {
+/**
+ * 二分查找
+ */
+public class TwoFind {
 
     private static int find(int[] arr, int target) {
 

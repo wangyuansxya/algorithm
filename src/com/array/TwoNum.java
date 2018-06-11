@@ -1,9 +1,11 @@
-package com.find;
+package com.array;
 
 import java.util.Arrays;
 
-
-public class Solution {
+/**
+ * 俩数之和，等于指定的数
+ */
+public class TwoNum {
 
     public static void main(String[] args) {
         // write your code here
