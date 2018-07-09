@@ -1,8 +1,6 @@
 package com.array;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class FindTarget {
@@ -20,7 +18,7 @@ public class FindTarget {
 				int x = arr[i];
 				int y = arr[j];
 				if(x + y == target) {
-					return new int[]{i, j};
+					return my int[]{i, j};
 				}
 			}
 		}
