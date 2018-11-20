@@ -21,6 +21,10 @@ public class AddTwoNumbers {
         System.out.println("args = [" + res.next.next.val + "]");
         System.out.println("args = [" + res.next.next.next.val + "]");
 //        System.out.println("args = [" + res.next.next.next.val + "]");
+
+        float a = 2.00f;
+        float b = 3.00f;
+        System.out.println("args = [" + (a / b) + "]");
     }
 
     /**
