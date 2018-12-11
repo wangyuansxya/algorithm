@@ -1,8 +1,6 @@
 package com.tree;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.LinkedBlockingQueue;
 
 public class InorderTraversal {
 
@@ -72,7 +70,11 @@ public class InorderTraversal {
     }
 
 
-
+    /**
+     * 层序遍历
+     * @param root
+     * @return
+     */
     public static List<List<Integer>> levelOrder(TreeNode root) {
         // write your code here
         if(root == null) return null;
